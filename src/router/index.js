@@ -1,22 +1,23 @@
 import Vue from "vue";
 import VueRouter from "vue-router";
 import Home from "../views/Home.vue";
+import store from "../store/";
 
 Vue.use(VueRouter);
 
 const About = () => import("../views/About.vue");
-
+const Profile = () => import("../views/Profile.vue");
 
 const Login = () => import("../views/Login.vue");
 const Register = () => import("../views/Register.vue");
 
-const isLogged = false;
+const isLogged = store.getters.getIsLogged;
 /**
  *
  *
  * Private List =>
  */
-const privateList = ["about"];
+const privateList = ["home", "about", "profile"];
 const routes = [
     {
         path: "/",
@@ -37,7 +38,12 @@ const routes = [
         path: "/register",
         name: "register",
         component: Register
-	}
+    },
+    {
+        path: "/profile",
+        name: "profile",
+        component: Profile
+    }
 ];
 
 /**

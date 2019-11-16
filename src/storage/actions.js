@@ -62,6 +62,6 @@ export function store_login(username, password) {
 	// Compare passwords
 	if(password !== userInfo.password) return {};
 
-	return {...userInfo};
+	return {userInfo: {...userInfo}, status: true};
 
 }

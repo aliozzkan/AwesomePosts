@@ -55,6 +55,7 @@
 </template>
 
 <script>
+import { mapGetters } from "vuex";
 import { store_register } from "@/storage/actions";
 export default {
     data() {
@@ -68,10 +69,19 @@ export default {
         handleSumbit(e) {
             e.preventDefault();
             const user = store_register(this.username, this.fullname, this.password);
-            console.log(user);
+            this.$router.push("/login");
         },
 
-    }
+    },
+    computed: mapGetters({
+		isLogged: "getIsLogged"
+	}),
+	created() {
+		console.log("a");
+		if(this.isLogged) {
+			this.$router.push("/");
+		}
+	}
 };
 </script>
 
