@@ -1,0 +1,7 @@
+[ x ] Create Layout System
+[ x ] Redirects according to auth
+[   ] Create functions for localStorate process 
+[   ] Create user list in local storage
+[   ] Design register page and process
+[   ] Design login page and process
+[   ] Design profile page

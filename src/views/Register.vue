@@ -6,7 +6,7 @@
                     <div class="w-75">
                         <img src="../assets/images/logo.png" alt="" class="img-fluid">
                     </div>
-                    <p class="mt-2 text-muted">You can login AwesomePosts on this page</p>
+                    <p class="mt-2 text-muted">You can register AwesomePosts on this page</p>
                 </div>
                 <div class="w-100 d-flex flex-column align-items-center" > 
                     <form class="w-50" @submit="handleSumbit">
@@ -15,19 +15,29 @@
                         <input
                             type="text"
                             class="form-control"
+                            v-model="username"
                             id="exampleInputUsername"
                             placeholder="Enter username"
-							v-model="username"
+                        />
+                    </div>
+                    <div class="form-group">
+                        <label for="exampleInputFullname">Fullname</label>
+                        <input
+                            type="text"
+                            v-model="fullname"
+                            class="form-control"
+                            id="exampleInputFullname"
+                            placeholder="Enter fullname"
                         />
                     </div>
                     <div class="form-group">
                         <label for="exampleInputPassword1">Password</label>
                         <input
                             type="password"
+                            v-model="password"
                             class="form-control"
                             id="exampleInputPassword1"
                             placeholder="Password"
-							v-model="password"
                         />
                     </div>
                     <button type="submit" class="btn btn-block btn-primary">
@@ -35,8 +45,8 @@
                     </button>
                 </form>
                 <p class="mt-3">
-                    Don't have an account? 
-                    <router-link tag="a" to="/register">Sign Up</router-link>
+                    Already have an account?
+                    <router-link tag="a" to="/login">Sign In</router-link>
                 </p>
                 </div>
             </div>
@@ -45,18 +55,22 @@
 </template>
 
 <script>
-import { store_login } from "@/storage/actions";
+import { store_register } from "@/storage/actions";
 export default {
-    data: () => ({
-		username: "",
-		password: ""
-    }),
+    data() {
+        return {
+            username: "",
+            fullname: "",
+            password: ""
+        }
+    },
     methods: {
         handleSumbit(e) {
-			e.preventDefault();
-			const result = store_login(this.username, this.password);
-			console.log(result);
-        }
+            e.preventDefault();
+            const user = store_register(this.username, this.fullname, this.password);
+            console.log(user);
+        },
+
     }
 };
 </script>
