@@ -3,7 +3,7 @@
         <div class="card">
             <div class="card-body">
                 <div class="d-flex align-items-center" style="flex-direction: column">
-                    <div class="w-75">
+                    <div class="w-50">
                         <img src="../assets/images/logo.png" alt="" class="img-fluid">
                     </div>
                     <p class="mt-2 text-muted">You can register AwesomePosts on this page</p>
