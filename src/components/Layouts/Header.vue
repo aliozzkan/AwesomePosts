@@ -21,9 +21,6 @@
                     <router-link class="nav-link" tag="a" to="/">Home <span class="sr-only">(current)</span></router-link>
                 </li>
                 <li class="nav-item">
-                    <router-link class="nav-link" tag="a" to="/profile">Trend Topics</router-link>
-                </li>
-                <li class="nav-item">
                     <router-link class="nav-link" tag="a" to="/profile">Profile</router-link>
                 </li>
                 <li class="nav-item d-flex align-items-center">
@@ -44,4 +41,8 @@ export default {
 };
 </script>
 
-<style></style>
+<style>
+    .navbar {
+        z-index: 9999;
+    }
+</style>

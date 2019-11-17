@@ -5,3 +5,11 @@
 [ x ] Design register page and process
 [ x ] Design login page and process
 [   ] Design profile page
+    [   ] General Infos
+    [   ] Subscribers
+    [   ] User Posts
+[   ] Home
+    [   ] Home profile comp
+    [   ] Home create post
+    [   ] Posts
+    [   ] Post Filters

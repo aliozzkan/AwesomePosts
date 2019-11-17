@@ -5,13 +5,11 @@
                 <img src="https://www.thedayspring.com.pk/wp-content/uploads/2019/01/no-image-available.jpg" class="border border-primary rounded-circle mr-1" height="35" width="auto" alt="">
             </div>
             <div>
-                Ali Özkan
+                {{user.fullname}}
             </div>
         </div>
         <div class="menu bg-primary border-primary" v-if="isShow">
             <ul>
-                <li><router-link tag="a" to="">My Profile</router-link></li>
-                <li><router-link tag="a" to="">Settings</router-link></li>
                 <li><button class="btn btn-sm btn-danger" @click="onLogout">Logout</button></li>
             </ul>
         </div>
@@ -26,6 +24,7 @@ export default {
     data: () => ({
         isShow: false
     }),
+    props: ["user"],
     methods: {
         ...mapActions(["logout"]),
 		onLogout() {

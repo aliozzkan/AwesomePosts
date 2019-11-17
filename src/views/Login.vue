@@ -18,6 +18,7 @@
                     </p>
                 </div>
                 <div class="w-100 d-flex flex-column align-items-center">
+                    <b-alert variant="danger w-50" :show="error">Email or password is wrong</b-alert>
                     <form class="w-50" @submit="handleSumbit">
                         <div class="form-group">
                             <label for="exampleInputUsername">Username</label>
@@ -63,7 +64,8 @@ import { store_login } from "@/storage/actions";
 export default {
     data: () => ({
         username: "",
-        password: ""
+        password: "",
+        error: false
     }),
     methods: {
         ...mapActions(["setUser"]),
@@ -73,6 +75,8 @@ export default {
             if (result.status) {
 				this.setUser(result.userInfo);
 				this.$router.go("/");
+            } else {
+                this.error = true;
             }
         }
     },

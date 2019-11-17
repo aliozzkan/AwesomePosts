@@ -1,12 +1,12 @@
 import Vue from "vue";
 import VueRouter from "vue-router";
-import Home from "../views/Home.vue";
 import store from "../store/";
 
+import Home from "../views/Home/Home.vue";
 Vue.use(VueRouter);
 
 const About = () => import("../views/About.vue");
-const Profile = () => import("../views/Profile.vue");
+const Profile = () => import("../views/Profile/Profile.vue");
 
 const Login = () => import("../views/Login.vue");
 const Register = () => import("../views/Register.vue");
