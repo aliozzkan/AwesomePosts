@@ -9,7 +9,7 @@
   "dependencies": {
     "bootstrap-vue": "^2.1.0",
     "core-js": "^3.3.2",
-    "lodash": "^4.17.15",
+    "lodash": "^4.17.21",
     "moment": "^2.24.0",
     "uuid": "^3.3.3",
     "v-click-outside-x": "^4.0.19",
