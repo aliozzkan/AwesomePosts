@@ -10,7 +10,7 @@
     "bootstrap-vue": "^2.1.0",
     "core-js": "^3.3.2",
     "lodash": "^4.17.15",
-    "moment": "^2.24.0",
+    "moment": "^2.29.2",
     "uuid": "^3.3.3",
     "v-click-outside-x": "^4.0.19",
     "vue": "^2.6.10",
